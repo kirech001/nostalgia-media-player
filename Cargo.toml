@@ -2,7 +2,7 @@
 name = "kirech-media-player"
 version = "0.8.0"
 edition = "2021"
-description = "A nostalgic Windows Media Player 8 style media player"
+description = "A nostalgic Windows XP era media player"
 
 [dependencies]
 wry = "0.57.3"

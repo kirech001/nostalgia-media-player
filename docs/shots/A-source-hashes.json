@@ -1,0 +1,27 @@
+[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "DEB8ED53464E30E5BA677D059FA07803FB5287A36C5BE539D8AC6EBAA1B15AE0",
+        "Path":  "D:\\Kirech Media Player\\ui\\index.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A41BAC760B3A983D3C5A16AA6A8823304FD25ED0DDA966116B6855B04FFC864F",
+        "Path":  "D:\\Kirech Media Player\\ui\\style.css"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "36946B13B9372F630B870DC10EBD25BBE26D14894BCF3B648226BECEB1F3F822",
+        "Path":  "D:\\Kirech Media Player\\ui\\controls.css"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "57DA469B619789C90C650B99D6EF7D380E235404909881F185949A454A13EDAB",
+        "Path":  "D:\\Kirech Media Player\\ui\\app.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F8279A8A55979FD4E6E4A74DF314EB564FAE553121E015354D4D5451768C0A5C",
+        "Path":  "D:\\Kirech Media Player\\src\\main.rs"
+    }
+]

@@ -1,0 +1,375 @@
+[
+    {
+        "name":  "Empty UI + transport",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "status":  "Ready"
+                     }
+    },
+    {
+        "name":  "File \u003e Add Files opens file chooser",
+        "pass":  true,
+        "evidence":  [
+                         {
+                             "frameId":  "211F8A0403E000545020B0EE4E3283C3",
+                             "mode":  "selectMultiple",
+                             "backendNodeId":  8
+                         }
+                     ]
+    },
+    {
+        "name":  "File \u003e Add Files imports playable media",
+        "pass":  true,
+        "evidence":  {
+                         "count":  4,
+                         "src":  "blob:http://wmp.localhost/ae708cd9-baeb-4fe4-a4d6-062e85b62069",
+                         "ready":  4
+                     }
+    },
+    {
+        "name":  "Metadata totals and extension",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "total":  "2:48"
+                     }
+    },
+    {
+        "name":  "Playlist + opens file chooser",
+        "pass":  true,
+        "evidence":  [
+                         {
+                             "frameId":  "211F8A0403E000545020B0EE4E3283C3",
+                             "mode":  "selectMultiple",
+                             "backendNodeId":  8
+                         }
+                     ]
+    },
+    {
+        "name":  "Playlist + imports playable media",
+        "pass":  true,
+        "evidence":  {
+                         "count":  1,
+                         "src":  "blob:http://wmp.localhost/2afe2a24-0517-4509-8718-cf6dc61f3be1",
+                         "ready":  4
+                     }
+    },
+    {
+        "name":  "File \u003e Add Folder opens file chooser",
+        "pass":  true,
+        "evidence":  [
+                         {
+                             "frameId":  "211F8A0403E000545020B0EE4E3283C3",
+                             "mode":  "selectMultiple",
+                             "backendNodeId":  22
+                         }
+                     ]
+    },
+    {
+        "name":  "File \u003e Add Folder imports playable media",
+        "pass":  true,
+        "evidence":  {
+                         "count":  6,
+                         "src":  "blob:http://wmp.localhost/42190dd6-d2cf-4e99-b251-bc6894def53a",
+                         "ready":  4
+                     }
+    },
+    {
+        "name":  "Folder import includes child filenames",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "count":  6,
+                         "total":  "2:50"
+                     }
+    },
+    {
+        "name":  "Drag hover feedback",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Drop imports and clears hint",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Row plays + active playmark",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "title":  "Afternoon"
+                     }
+    },
+    {
+        "name":  "Play button pauses",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Space toggles play/pause once each",
+        "pass":  true,
+        "evidence":  "Paused"
+    },
+    {
+        "name":  "Next/previous buttons and N/P",
+        "pass":  true,
+        "evidence":  "2"
+    },
+    {
+        "name":  "Seek drag forward",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "time":  30.800002,
+                         "label":  "0:30"
+                     }
+    },
+    {
+        "name":  "Seek drag backward + labels",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "time":  11,
+                         "label":  "0:11"
+                     }
+    },
+    {
+        "name":  "Seek click midpoint",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "time":  22
+                     }
+    },
+    {
+        "name":  "Right key +5 seconds",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "time":  27
+                     }
+    },
+    {
+        "name":  "Left key -5 seconds",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "time":  22
+                     }
+    },
+    {
+        "name":  "Previous restarts after 3 seconds",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Volume drag",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "volume":  0.2999998580577762
+                     }
+    },
+    {
+        "name":  "Mute button",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Wheel volume and unmute",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "volume":  0.34999985805777617
+                     }
+    },
+    {
+        "name":  "Up/down volume keys",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "volume":  0.34999985805777617
+                     }
+    },
+    {
+        "name":  "Wall clock matches local time",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "expected":  "03:16",
+                         "actual":  "03:16"
+                     }
+    },
+    {
+        "name":  "Viz chip Waves",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Viz chip Ambience",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Viz chip previous",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "View visualization bars",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "View visualization waves",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "View visualization ambience",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "View Full Screen hides menu/list",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "width":  1920,
+                         "height":  1080
+                     }
+    },
+    {
+        "name":  "F11 toggle and Escape exit",
+        "pass":  true,
+        "evidence":  {
+                         "width":  1000,
+                         "height":  690
+                     }
+    },
+    {
+        "name":  "About focuses OK and makes background inert",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "About Tab wraps to close",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "About Shift+Tab wraps to OK",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "About Escape returns Help focus",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Keyboard opens Help + focuses item",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Keyboard traverses menus",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Menu Escape closes + restores label focus",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Outside mousedown closes menu",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "About OK closes",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Stop removes source",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Play restarts after Stop",
+        "pass":  false,
+        "evidence":  {
+                         "status":  "Playing",
+                         "srcAttribute":  null,
+                         "currentSrc":  "blob:http://wmp.localhost/39ed2acc-55a7-4938-b44f-6ff566f1c7c7",
+                         "readyState":  0,
+                         "paused":  false
+                     }
+    },
+    {
+        "name":  "Right-click removal + totals",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true,
+                         "total":  "2:00"
+                     }
+    },
+    {
+        "name":  "Playlist clear button + empty state",
+        "pass":  true,
+        "evidence":  {
+                         "pass":  true
+                     }
+    },
+    {
+        "name":  "Harness exception",
+        "pass":  false,
+        "evidence":  "{\"exceptionId\":1,\"text\":\"Uncaught (in promise) Error: Condition timed out\",\"lineNumber\":1,\"columnNumber\":214,\"scriptId\":\"101\",\"stackTrace\":{\"callFrames\":[{\"functionName\":\"check\",\"scriptId\":\"101\",\"url\":\"\",\"lineNumber\":0,\"columnNumber\":213}]},\"exception\":{\"type\":\"object\",\"subtype\":\"error\",\"className\":\"Error\",\"description\":\"Error: Condition timed out\\n    at check (\\u003canonymous\\u003e:1:214)\",\"objectId\":\"-587785903833863096.2.1\"}}"
+    }
+]

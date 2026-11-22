@@ -50,7 +50,7 @@ fn main() -> wry::Result<()> {
     let proxy = event_loop.create_proxy();
 
     let window = WindowBuilder::new()
-        .with_title("Windows Media Player")
+        .with_title("Nostalgia Player")
         .with_inner_size(LogicalSize::new(1000.0, 690.0))
         .with_min_inner_size(LogicalSize::new(880.0, 600.0))
         .with_decorations(false)

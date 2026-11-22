@@ -1,5 +1,5 @@
 /* ============================================================
-   Windows Media Player 8 — nostalgic edition
+   Nostalgia Player — XP era edition
    Vanilla JS. No frameworks, no build step.
    ============================================================ */
 
@@ -373,7 +373,7 @@
 
   function updateNowPlaying() {
     const track = state.tracks[state.current];
-    els.trackTitle.textContent = track ? track.title : "Windows Media Player";
+    els.trackTitle.textContent = track ? track.title : "Nostalgia Player";
     els.trackSub.textContent = track
       ? track.artist || track.name
       : "Drag music or video files here";

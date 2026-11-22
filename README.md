@@ -1,7 +1,7 @@
 # Nostalgia Player
-**Nostalgic edition – Windows Media Player 8.0 (Windows XP) visual authenticity**
+**Nostalgic edition – Windows XP era visual authenticity**
 
-A single-file Rust + WebView2 application that reproduces the look and feel of the classic Windows Media Player 8 (2001) while keeping all playback, playlist, seek, volume, visualizations and window controls functional.
+A single-file Rust + WebView2 application that reproduces the look and feel of the classic Windows XP era media player while keeping all playback, playlist, seek, volume, visualizations and window controls functional.
 
 ![Nostalgia Player](docs/screenshot.png)
 
