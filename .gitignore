@@ -1,0 +1,9 @@
+/target/
+*.exe
+*.pdb
+*.rs.bk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.WebView2/
