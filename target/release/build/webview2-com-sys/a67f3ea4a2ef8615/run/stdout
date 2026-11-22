@@ -1,2 +1,0 @@
-cargo:rustc-link-search=native=D:\Kirech Media Player\target\release\build\webview2-com-sys/a67f3ea4a2ef8615\out\x64
-cargo:rustc-link-lib=advapi32
