@@ -42,7 +42,7 @@ cargo build --release
 The command produces:
 
 ```
-target\release\kirech-media-player.exe
+target\release\nostalgia-media-player.exe
 ```
 
 The executable is self-contained; copy it to any Windows machine that has the WebView2 runtime installed.
@@ -52,7 +52,7 @@ The executable is self-contained; copy it to any Windows machine that has the We
 ## ▶️ Run
 
 ```bat
-kirech-media-player.exe
+nostalgia-media-player.exe
 ```
 
 The window opens at **1000 × 690 px** (minimum **880 × 600 px**).
