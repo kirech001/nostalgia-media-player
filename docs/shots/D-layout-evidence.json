@@ -1,0 +1,271 @@
+[
+    {
+        "viewport":  "1000x690",
+        "overflow":  false,
+        "shell":  {
+                      "x":  1,
+                      "y":  57,
+                      "w":  998,
+                      "h":  632
+                  },
+        "pane":  {
+                     "x":  1,
+                     "y":  57,
+                     "w":  248,
+                     "h":  610
+                 },
+        "stage":  {
+                      "x":  249,
+                      "y":  57,
+                      "w":  750,
+                      "h":  518
+                  },
+        "console":  {
+                        "x":  249,
+                        "y":  575,
+                        "w":  750,
+                        "h":  92
+                    },
+        "status":  {
+                       "x":  1,
+                       "y":  667,
+                       "w":  998,
+                       "h":  22
+                   },
+        "listOverflow":  false,
+        "rows":  [
+                     {
+                         "text":  "Morning01 Test Artist0:36",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "A deliberately long track title for narrow playlist truncation02 Test Artist0:40",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "Afternoon03 Test Artist0:44",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "Evening04 Test Artist0:48",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     }
+                 ],
+        "headerColumns":  "102px 51px 52px",
+        "media":  {
+                      "width":  0,
+                      "height":  0,
+                      "fit":  "contain"
+                  },
+        "openMenu":  null,
+        "about":  false,
+        "focus":  "tp tp-main"
+    },
+    {
+        "viewport":  "880x600",
+        "overflow":  false,
+        "shell":  {
+                      "x":  1,
+                      "y":  57,
+                      "w":  878,
+                      "h":  542
+                  },
+        "pane":  {
+                     "x":  1,
+                     "y":  57,
+                     "w":  196,
+                     "h":  520
+                 },
+        "stage":  {
+                      "x":  197,
+                      "y":  57,
+                      "w":  682,
+                      "h":  428
+                  },
+        "console":  {
+                        "x":  197,
+                        "y":  485,
+                        "w":  682,
+                        "h":  92
+                    },
+        "status":  {
+                       "x":  1,
+                       "y":  577,
+                       "w":  878,
+                       "h":  22
+                   },
+        "listOverflow":  false,
+        "rows":  [
+                     {
+                         "text":  "Morning01 Test Artist0:36",
+                         "columns":  "67.3281px 33.6719px 52px",
+                         "width":  181
+                     },
+                     {
+                         "text":  "A deliberately long track title for narrow playlist truncation02 Test Artist0:40",
+                         "columns":  "67.3281px 33.6719px 52px",
+                         "width":  181
+                     },
+                     {
+                         "text":  "Afternoon03 Test Artist0:44",
+                         "columns":  "67.3281px 33.6719px 52px",
+                         "width":  181
+                     },
+                     {
+                         "text":  "Evening04 Test Artist0:48",
+                         "columns":  "67.3281px 33.6719px 52px",
+                         "width":  181
+                     }
+                 ],
+        "headerColumns":  "67.3281px 33.6719px 52px",
+        "media":  {
+                      "width":  0,
+                      "height":  0,
+                      "fit":  "contain"
+                  },
+        "openMenu":  null,
+        "about":  false,
+        "focus":  "tp tp-main"
+    },
+    {
+        "viewport":  "1920x1080",
+        "overflow":  false,
+        "shell":  {
+                      "x":  1,
+                      "y":  33,
+                      "w":  1918,
+                      "h":  1046
+                  },
+        "pane":  {
+                     "x":  0,
+                     "y":  0,
+                     "w":  0,
+                     "h":  0
+                 },
+        "stage":  {
+                      "x":  1,
+                      "y":  33,
+                      "w":  1918,
+                      "h":  932
+                  },
+        "console":  {
+                        "x":  1,
+                        "y":  965,
+                        "w":  1918,
+                        "h":  92
+                    },
+        "status":  {
+                       "x":  1,
+                       "y":  1057,
+                       "w":  1918,
+                       "h":  22
+                   },
+        "listOverflow":  false,
+        "rows":  [
+                     {
+                         "text":  "Morning01 Test Artist0:36",
+                         "columns":  "minmax(0px, 2fr) minmax(0px, 1fr) 52px",
+                         "width":  0
+                     },
+                     {
+                         "text":  "A deliberately long track title for narrow playlist truncation02 Test Artist0:40",
+                         "columns":  "minmax(0px, 2fr) minmax(0px, 1fr) 52px",
+                         "width":  0
+                     },
+                     {
+                         "text":  "Afternoon03 Test Artist0:44",
+                         "columns":  "minmax(0px, 2fr) minmax(0px, 1fr) 52px",
+                         "width":  0
+                     },
+                     {
+                         "text":  "Evening04 Test Artist0:48",
+                         "columns":  "minmax(0px, 2fr) minmax(0px, 1fr) 52px",
+                         "width":  0
+                     }
+                 ],
+        "headerColumns":  "minmax(0px, 2fr) minmax(0px, 1fr) 52px",
+        "media":  {
+                      "width":  0,
+                      "height":  0,
+                      "fit":  "contain"
+                  },
+        "openMenu":  null,
+        "about":  false,
+        "focus":  "tp tp-main"
+    },
+    {
+        "viewport":  "1000x690",
+        "overflow":  false,
+        "shell":  {
+                      "x":  1,
+                      "y":  57,
+                      "w":  998,
+                      "h":  632
+                  },
+        "pane":  {
+                     "x":  1,
+                     "y":  57,
+                     "w":  248,
+                     "h":  610
+                 },
+        "stage":  {
+                      "x":  249,
+                      "y":  57,
+                      "w":  750,
+                      "h":  518
+                  },
+        "console":  {
+                        "x":  249,
+                        "y":  575,
+                        "w":  750,
+                        "h":  92
+                    },
+        "status":  {
+                       "x":  1,
+                       "y":  667,
+                       "w":  998,
+                       "h":  22
+                   },
+        "listOverflow":  false,
+        "rows":  [
+                     {
+                         "text":  "Morning01 Test Artist0:36",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "A deliberately long track title for narrow playlist truncation02 Test Artist0:40",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "Afternoon03 Test Artist0:44",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "Evening04 Test Artist0:48",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     },
+                     {
+                         "text":  "16x9-local-test—0:02",
+                         "columns":  "102px 51px 52px",
+                         "width":  233
+                     }
+                 ],
+        "headerColumns":  "102px 51px 52px",
+        "media":  {
+                      "width":  320,
+                      "height":  180,
+                      "fit":  "contain"
+                  },
+        "openMenu":  null,
+        "about":  false,
+        "focus":  "tp tp-main"
+    }
+]

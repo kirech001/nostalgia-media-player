@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light">
+  <title>Nostalgia Player</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="controls.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ================= TITLE BAR ================= -->
+  <header class="titlebar" id="titlebar">
+    <div class="title-left">
+      <div class="wmp-orb">
+        <svg viewBox="0 0 28 28" aria-hidden="true">
+          <defs>
+            <radialGradient id="orb" cx="35%" cy="30%" r="75%">
+              <stop offset="0%"  stop-color="#bfe4ff"/>
+              <stop offset="38%" stop-color="#3f8ce8"/>
+              <stop offset="74%" stop-color="#134a9e"/>
+              <stop offset="100%" stop-color="#061c46"/>
+            </radialGradient>
+          </defs>
+          <circle cx="14" cy="14" r="12.2" fill="url(#orb)" stroke="#04142e" stroke-width="1"/>
+          <ellipse cx="10.5" cy="8.5" rx="5.2" ry="3.1" fill="#ffffff" opacity=".38"/>
+          <path d="M11 8.6l7.4 5.4L11 19.4z" fill="#ffffff" stroke="#0a2a5e" stroke-width=".7"/>
+        </svg>
+      </div>
+      <div class="title-text">Nostalgia Player</div>
+    </div>
+    <div class="win-buttons">
+      <button class="win-btn" id="btn-min" title="Minimize">
+        <svg viewBox="0 0 10 10"><rect x="2" y="6.4" width="6" height="1.6" fill="currentColor"/></svg>
+      </button>
+      <button class="win-btn" id="btn-max" title="Maximize">
+        <svg viewBox="0 0 10 10"><rect x="2.2" y="2.2" width="5.6" height="5.6" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="2.2" y="2.2" width="5.6" height="1.8" fill="currentColor"/></svg>
+      </button>
+      <button class="win-btn win-close" id="btn-close" title="Close">
+        <svg viewBox="0 0 10 10"><path d="M2.4 2.4l5.2 5.2M7.6 2.4L2.4 7.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MENU BAR ================= -->
+  <nav class="menubar" id="menubar" role="menubar" aria-label="Application menu">
+    <div class="menu" data-menu="file">
+      <button type="button" class="menu-label" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-file">File</button>
+      <div class="menu-pop" id="menu-file" role="menu" aria-label="File">
+        <button data-action="add-files">Add Files…</button>
+        <button data-action="add-folder">Add Folder…</button>
+        <div class="menu-sep"></div>
+        <button data-action="clear">Clear Playlist</button>
+        <div class="menu-sep"></div>
+        <button data-action="exit">Exit</button>
+      </div>
+    </div>
+    <div class="menu" data-menu="view">
+      <button type="button" class="menu-label" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-view">View</button>
+      <div class="menu-pop" id="menu-view" role="menu" aria-label="View">
+        <button data-action="viz-bars">Visualization: Bars</button>
+        <button data-action="viz-waves">Visualization: Waves</button>
+        <button data-action="viz-ambience">Visualization: Ambience</button>
+        <div class="menu-sep"></div>
+        <button data-action="theater">Full Screen</button>
+      </div>
+    </div>
+    <div class="menu" data-menu="play">
+      <button type="button" class="menu-label" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-play">Play</button>
+      <div class="menu-pop" id="menu-play" role="menu" aria-label="Play">
+        <button data-action="toggle">Play / Pause</button>
+        <button data-action="stop">Stop</button>
+        <div class="menu-sep"></div>
+        <button data-action="prev">Previous</button>
+        <button data-action="next">Next</button>
+      </div>
+    </div>
+    <div class="menu" data-menu="tools">
+      <button type="button" class="menu-label" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-tools">Tools</button>
+      <div class="menu-pop" id="menu-tools" role="menu" aria-label="Tools">
+        <button data-action="clear">Clear Playlist</button>
+        <button data-action="open-folder">Add Folder…</button>
+      </div>
+    </div>
+    <div class="menu" data-menu="help">
+      <button type="button" class="menu-label" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-help">Help</button>
+      <div class="menu-pop" id="menu-help" role="menu" aria-label="Help">
+        <button data-action="about">About Nostalgia Player</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= SHELL ================= -->
+  <main class="shell" id="shell">
+
+    <!-- LEFT: PLAYLIST PANE (WMP 8 style) -->
+    <aside class="playlist-pane" id="playlist-pane">
+      <div class="pane-header">
+        <span class="pane-title">Playlist</span>
+        <button class="pane-btn" id="btn-pl-add" title="Add Files">
+          <svg viewBox="0 0 16 16"><path d="M8 3.5v9M3.5 8h9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="pane-btn" id="btn-pl-clear" title="Clear Playlist">
+          <svg viewBox="0 0 16 16"><path d="M4 4.5l8 7M12 4.5l-8 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="pane-body">
+        <div class="pl-cols">
+          <span>Title</span><span>Artist</span><span class="c-length">Length</span>
+        </div>
+        <div class="pl-list" id="pl-list">
+          <ul class="playlist" id="playlist"></ul>
+          <div class="pl-empty" id="pl-empty">
+            <div class="pl-empty-art">♪</div>
+            <div>Your playlist is empty.</div>
+            <div class="pl-empty-hint">Add files from the File menu,<br>or drop them on the player.</div>
+          </div>
+        </div>
+      </div>
+      <div class="pl-total">Total Time: <b id="total-time">0:00</b></div>
+      <div class="pane-viz">
+        <canvas id="console-viz"></canvas>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <section class="stage" id="stage">
+      <div class="stage-bg"></div>
+
+      <div class="view view-now" id="view-now">
+        <canvas id="viz"></canvas>
+        <video id="media" playsinline></video>
+        <div class="stage-overlay">
+          <div class="track-title" id="track-title">Nostalgia Player</div>
+          <div class="track-sub" id="track-sub">Drag music or video files here</div>
+        </div>
+        <div class="stage-tools">
+          <button class="tiny-btn" id="viz-prev" title="Previous visualization">‹</button>
+          <span class="viz-name" id="viz-name">Bars</span>
+          <button class="tiny-btn" id="viz-next" title="Next visualization">›</button>
+        </div>
+        <div class="drop-hint" id="drop-hint">Drop to add to the playlist</div>
+      </div>
+    </section>
+
+    <!-- CONSOLE -->
+    <section class="console">
+      <div class="transport">
+        <button class="tp" id="btn-prev" title="Previous">
+          <svg viewBox="0 0 16 16"><path d="M4 3h2v10H4zM12 3v10L6 8z" fill="currentColor"/></svg>
+        </button>
+        <button class="tp tp-main" id="btn-play" title="Play">
+          <svg class="ic-play" viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z" fill="currentColor"/></svg>
+          <svg class="ic-pause hidden" viewBox="0 0 16 16"><rect x="4" y="3" width="3" height="10" fill="currentColor"/><rect x="9" y="3" width="3" height="10" fill="currentColor"/></svg>
+        </button>
+        <button class="tp" id="btn-stop" title="Stop">
+          <svg viewBox="0 0 16 16"><rect x="4" y="4" width="8" height="8" fill="currentColor"/></svg>
+        </button>
+        <button class="tp" id="btn-next" title="Next">
+          <svg viewBox="0 0 16 16"><path d="M12 3h-2v10h2zM4 3v10l6-5z" fill="currentColor"/></svg>
+        </button>
+      </div>
+
+      <div class="seek-block">
+        <div class="time-row">
+          <span id="time-cur">00:00</span>
+          <span class="time-sep">/</span>
+          <span id="time-dur">00:00</span>
+        </div>
+        <div class="seekbar" id="seekbar">
+          <div class="seek-track"></div>
+          <div class="seek-fill" id="seek-fill"></div>
+          <div class="seek-thumb" id="seek-thumb"></div>
+        </div>
+      </div>
+
+      <div class="vol-block">
+        <button class="spk" id="btn-mute" title="Mute">
+          <svg viewBox="0 0 16 16"><path d="M2.5 6h2.2L8 3.2v9.6L4.7 10H2.5z" fill="currentColor"/><path class="spk-wave" d="M10.2 5.4a3.4 3.4 0 0 1 0 5.2M11.8 3.8a5.6 5.6 0 0 1 0 8.4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path class="spk-x hidden" d="M10.6 6l3.4 4M14 6l-3.4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+        <div class="volbar" id="volbar">
+          <div class="vol-track"></div>
+          <div class="vol-fill" id="vol-fill"></div>
+          <div class="vol-thumb" id="vol-thumb"></div>
+        </div>
+        <div class="clock" id="clock">--:--</div>
+      </div>
+    </section>
+
+    <!-- STATUS BAR -->
+    <footer class="statusbar">
+      <span class="sb-item" id="status-text">Ready</span>
+      <span class="sb-grow"></span>
+      <span class="sb-item" id="status-fmt">Stereo</span>
+      <span class="sb-item sb-dim" id="status-ext"></span>
+    </footer>
+
+  </main>
+
+  <input type="file" id="file-input" multiple hidden
+         accept="audio/*,video/*,.mp3,.flac,.ogg,.oga,.wav,.m4a,.aac,.opus,.wma,.mp4,.webm,.mkv,.avi,.wmv,.mov,.m4v">
+  <input type="file" id="dir-input" webkitdirectory multiple hidden>
+
+  <!-- ABOUT DIALOG -->
+  <div class="modal hidden" id="about">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="about-title" tabindex="-1">
+      <div class="dialog-title">
+        <span id="about-title">About Nostalgia Player</span>
+        <button class="dialog-x" data-action="close-about" aria-label="Close About">✕</button>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-logo">
+          <div class="wmp-orb big">
+            <svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="12.2" fill="url(#orb)" stroke="#04142e" stroke-width="1"/><ellipse cx="10.5" cy="8.5" rx="5.2" ry="3.1" fill="#fff" opacity=".38"/><path d="M11 8.6l7.4 5.4L11 19.4z" fill="#fff" stroke="#0a2a5e" stroke-width=".7"/></svg>
+          </div>
+        </div>
+        <div class="dialog-text">
+          <b>Nostalgia Player</b><br>
+          <span class="dialog-sub">Nostalgic Edition &middot; build 0.8.0</span>
+          <p>A love letter to the blue player of 2001.<br>
+          Tahoma, gradients, and a spectrum analyzer<br>
+          that is doing its best.</p>
+          <p class="dialog-small">Not affiliated with Microsoft.<br>All trademarks belong to their owners.</p>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <button class="xp-button" data-action="close-about">OK</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
