@@ -6,9 +6,6 @@ A single-file Rust + WebView2 application that reproduces the look and feel of t
 ![Nostalgia Player](docs/screenshot.png)
 
 ---
-
-## ✨ Key Features
-
 ## ✨ Key Features
 
 - **Native Windows XP-style UI** – Luna blue title bar, Tahoma font, silver bezels, blue-glass transport controls.
