@@ -1,0 +1,10 @@
+D:\Kirech Media Player\target\release\build\windows-threading/4d93c880e229627a\out\windows_threading-4d93c880e229627a.d: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\bindings.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\pool.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\../readme.md
+
+D:\Kirech Media Player\target\release\build\windows-threading/4d93c880e229627a\out\libwindows_threading-4d93c880e229627a.rlib: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\bindings.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\pool.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\../readme.md
+
+D:\Kirech Media Player\target\release\build\windows-threading/4d93c880e229627a\out\libwindows_threading-4d93c880e229627a.rmeta: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\bindings.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\pool.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\../readme.md
+
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\lib.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\bindings.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\pool.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-threading-0.2.1\src\../readme.md:

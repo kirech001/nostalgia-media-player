@@ -1,0 +1,14 @@
+D:\Kirech Media Player\target\release\build\thiserror/8c4f71878ee0d0ae\out\thiserror-8c4f71878ee0d0ae.d: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\aserror.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\display.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\var.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\private.rs D:\Kirech\ Media\ Player\target\release\build\thiserror/199adc966e58af47\out/private.rs
+
+D:\Kirech Media Player\target\release\build\thiserror/8c4f71878ee0d0ae\out\libthiserror-8c4f71878ee0d0ae.rlib: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\aserror.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\display.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\var.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\private.rs D:\Kirech\ Media\ Player\target\release\build\thiserror/199adc966e58af47\out/private.rs
+
+D:\Kirech Media Player\target\release\build\thiserror/8c4f71878ee0d0ae\out\libthiserror-8c4f71878ee0d0ae.rmeta: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\aserror.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\display.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\var.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\private.rs D:\Kirech\ Media\ Player\target\release\build\thiserror/199adc966e58af47\out/private.rs
+
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\lib.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\aserror.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\display.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\var.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.21\src\private.rs:
+D:\Kirech\ Media\ Player\target\release\build\thiserror/199adc966e58af47\out/private.rs:
+
+# env-dep:OUT_DIR=D:\\Kirech Media Player\\target\\release\\build\\thiserror/199adc966e58af47\\out

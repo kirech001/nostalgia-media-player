@@ -11,7 +11,7 @@
 #define MyAppExeName "kirech-media-player.exe"
 
 [Setup]
-AppId={{{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}}}
+AppId={{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
@@ -22,9 +22,9 @@ DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableWelcomePage=no
 DisableFinishedPage=no
-OutputDir=installer/output
+OutputDir=output
 OutputBaseFilename=NostalgiaPlayer-{#MyAppVersion}-Setup
-SetupIconFile=installer/app.ico
+SetupIconFile=
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequired=admin
@@ -40,13 +40,13 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "assoc_audio"; Description: "Ассоциировать с аудио файлами"; GroupDescription: "{cm:FileAssociations}"; Flags: unchecked
-Name: "assoc_video"; Description: "Ассоциировать с видео файлами"; GroupDescription: "{cm:FileAssociations}"; Flags: unchecked
+Name: "assoc_audio"; Description: "Associate with audio files"; GroupDescription: "File associations:"; Flags: unchecked
+Name: "assoc_video"; Description: "Associate with video files"; GroupDescription: "File associations:"; Flags: unchecked
 
 [Files]
-Source: "target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "docs\screenshot.png"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\docs\screenshot.png"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -107,15 +107,7 @@ begin
   Result := True;
 end;
 
-procedure CurStepChanged(CurStep: TSetupStep);
-begin
-  if CurStep = ssPostInstall then
-  begin
-    // Refresh shell so file associations take effect immediately
-    ShellExec('open', 'cmd.exe', '/c "assoc >nul"', '', '', SW_HIDE, ewNoWait, ErrorCode);
-  end;
-end;
-
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}"
-Type: filesifempty; Name: "{group}"
+Type: dirifempty; Name: "{group}"
+

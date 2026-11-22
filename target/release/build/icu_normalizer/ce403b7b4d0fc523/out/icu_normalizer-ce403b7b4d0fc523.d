@@ -1,0 +1,10 @@
+D:\Kirech Media Player\target\release\build\icu_normalizer/ce403b7b4d0fc523\out\icu_normalizer-ce403b7b4d0fc523.d: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\properties.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\provider.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\uts46.rs
+
+D:\Kirech Media Player\target\release\build\icu_normalizer/ce403b7b4d0fc523\out\libicu_normalizer-ce403b7b4d0fc523.rlib: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\properties.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\provider.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\uts46.rs
+
+D:\Kirech Media Player\target\release\build\icu_normalizer/ce403b7b4d0fc523\out\libicu_normalizer-ce403b7b4d0fc523.rmeta: D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\lib.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\properties.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\provider.rs D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\uts46.rs
+
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\lib.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\properties.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\provider.rs:
+D:\KirechToolchain\cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-2.4.0\src\uts46.rs:

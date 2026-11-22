@@ -1,0 +1,1 @@
+D:\Kirech\ Media\ Player\target\release\kirech-media-player.exe: D:\Kirech\ Media\ Player\src\main.rs D:\Kirech\ Media\ Player\ui\app.js D:\Kirech\ Media\ Player\ui\controls.css D:\Kirech\ Media\ Player\ui\index.html D:\Kirech\ Media\ Player\ui\style.css
