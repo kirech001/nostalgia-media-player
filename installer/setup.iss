@@ -5,7 +5,7 @@
 ; ============================================================
 
 #define MyAppName "Nostalgia Player"
-#define MyAppVersion "0.8.0"
+#define MyAppVersion "0.1.0"
 #define MyAppPublisher "Kirech Media Player"
 #define MyAppURL "https://github.com/kirech001/kirech-media-player"
 #define MyAppExeName "kirech-media-player.exe"
@@ -46,7 +46,6 @@ Name: "assoc_video"; Description: "Associate with video files"; GroupDescription
 [Files]
 Source: "..\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\docs\screenshot.png"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -80,31 +79,27 @@ Root: HKCU; Subkey: "Software\Classes\.mov"; ValueType: string; ValueName: ""; V
 Root: HKCU; Subkey: "Software\Classes\.mpg"; ValueType: string; ValueName: ""; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
 Root: HKCU; Subkey: "Software\Classes\.mpeg"; ValueType: string; ValueName: ""; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
 
-; Set Nostalgia Player as default handler (UserChoice)
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mp3\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.wav\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.flac\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.ogg\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.oga\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.opus\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.m4a\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.aac\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.wma\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_audio
 
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mp4\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.m4v\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.webm\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mkv\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.avi\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.wmv\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mov\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mpg\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mpeg\UserChoice"; ValueType: string; ValueName: "ProgId"; ValueData: "NostalgiaPlayer.File"; Flags: uninsdeletevalue; Tasks: assoc_video
 
 [Code]
 function InitializeSetup(): Boolean;
 begin
   Result := True;
+end;
+procedure CurStepChanged(CurStep: TSetupStep);
+var
+  ErrorCode: Integer;
+begin
+  // Windows 8+ protects the UserChoice registry key, so we cannot set
+  // the default player programmatically. Instead we registered our ProgId;
+  // now open the system "Default apps" page so the user can confirm with
+  // two clicks. Only when association tasks were selected.
+  if CurStep = ssPostInstall then
+  begin
+    if IsTaskSelected('assoc_audio') or IsTaskSelected('assoc_video') then
+      ShellExecAsOriginalUser('open', 'ms-settings:defaultapps', '', '',
+        SW_SHOWNORMAL, ewNoWait, ErrorCode);
+  end;
 end;
 
 [UninstallDelete]
